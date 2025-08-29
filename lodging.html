@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+
+<!--begin::HTMLPage-->
+<html lang="en">
+
+<!--begin::HTMLHead-->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" type="image/x-icon" href="./media/IslandIcon.ico">
+     <link rel="shortcut icon" href="./media/island.ico" />
+     <title>Taniti Tourism</title>
+     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<!--end::HTMLHead-->
+
+<!--begin::Body-->
+<body>
+
+     <!--begin::Header-->
+     <header>
+          <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+               <div class="container-fluid">
+
+                    <!--begin::LogoName-->
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                         <img src="./media/island.svg" alt="Logo" width="30" height="30" class="me-2">
+                         Taniti Tourism
+                    </a>
+                    <!--end::LogoName-->
+
+                    <!--begin::MobileReadiness-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                         aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--end::MobileReadiness-->
+
+                    <!--begin::Navigation-->
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                         <ul class="navbar-nav me-auto">
+                              <li class="nav-item">
+                                   <a class="nav-link" href="index.html">
+                                        Dashboard
+                                        <span class="visually-hidden">(current)</span>
+                                   </a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+                              <li class="nav-item"><a class="nav-link active" href="lodging.html">Lodging</a></li>
+                              <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+                              <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a>
+                              </li>
+                         </ul>
+
+                         <!--begin::BannerSearchForm-->
+                         <form class="d-flex" onsubmit="handleSearch(event)">
+                              <input id="searchInput" class="form-control me-sm-2" type="search" placeholder="Search">
+                              <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0"
+                                   type="submit">Search</button>
+                         </form>
+                         <!--end::BannerSearchForm-->
+
+                    </div>
+                    <!--end::Navigation-->
+
+               </div>
+          </nav>
+     </header>
+     <!--end::Header-->
+
+     <!--beign::PageBodyContent-->
+     <div class="bs-docs-section">
+          <div class="container mt-5">
+
+               <!--begin::MainPageBody-->
+               <main role="main" class="pb-3 searchable">
+
+                    <!--begin::PageContent-->
+                    <div id="page-content" class="px-4">
+
+                         <!--begin::PageSpecificHeader-->
+                         <div class="d-flex justify-content-between align-items-center mb-4">
+                              <h1>Taniti Lodging Guide</h1>
+                         </div>
+                         <!--end::PageSpecificHeader-->
+
+                         <!--begin::LodgingDetails-->
+                         <div class="container my-5">
+
+                              <!--begin::IntroParagraph-->
+                              <div class="mb-4">
+                                   <figure>
+                                        <blockquote class="blockquote">
+                                             <p class="mb-0">
+                                                  Taniti has a wide variety of lodging that range from an inexpensive hostel to one
+                                                  large, four-star resort. There are many small, family-owned hotels and a growing
+                                                  number of bed and breakfasts. All types of lodging are strictly
+                                                  regulated and regularly inspected by the Tanitian government.
+                                             </p>
+                                        </blockquote>
+                                   </figure>
+                              </div>
+                              <!--end::IntroParagraph-->
+
+                              <!--begin::LodgingCards-->
+                              <div class="row row-cols-1 row-cols-md-2 g-4">
+
+                                   <!--begin::BudgetFriendlyStays-->
+                                   <div class="col">
+                                        <div class="card h-100 shadow-sm">
+                                             <div class="card-body">
+                                                  <h5 class="card-title">Budget-Friendly Stays</h5>
+                                                  <p class="card-text">
+                                                       Perfect for travelers looking to stretch their budget without
+                                                       sacrificing comfort.
+                                                  </p>
+                                                  <ul>
+                                                       <li><a href="#">Taniti Inn & Suites</a></li>
+                                                       <li><a href="#">Island Budget Lodge</a></li>
+                                                       <li><a href="#">Seabreeze Stayover</a></li>
+                                                       <li><a href="#">Coral Coast Comfort</a></li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!--end::BudgetFriendlyStays-->
+
+                                   <!--begin::IslandLuxuryRetreat -->
+                                   <div class="col">
+                                        <div class="card h-100 shadow-sm">
+                                             <div class="card-body">
+                                                  <h5 class="card-title">Island Luxury Retreat</h5>
+                                                  <p class="card-text">
+                                                       Taniti’s premier 4-star resort offers upscale amenities and
+                                                       breathtaking ocean views.
+                                                  </p>
+                                                  <ul>
+                                                       <li><a href="#">Azure Pearl Resort</a></li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!--begin::IslandLuxuryRetreat -->
+
+                                   <!--begin::LocalIslandCharm-->
+                                   <div class="col">
+                                        <div class="card h-100 shadow-sm">
+                                             <div class="card-body">
+                                                  <h5 class="card-title">Local Island Charm</h5>
+                                                  <p class="card-text">
+                                                       Family-owned hotels with authentic island décor and personalized
+                                                       hospitality.
+                                                  </p>
+                                                  <ul>
+                                                       <li><a href="#">Taniti Tiki Lodge</a></li>
+                                                       <li><a href="#">Sunset Palms Inn</a></li>
+                                                       <li><a href="#">Hibiscus Haven</a></li>
+                                                       <li><a href="#">The Coconut House</a></li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!--end::LocalIslandCharm-->
+
+                                   <!--begin::CoastalComforts-->
+                                   <div class="col">
+                                        <div class="card h-100 shadow-sm">
+                                             <div class="card-body">
+                                                  <h5 class="card-title">Coastal Comforts</h5>
+                                                  <p class="card-text">
+                                                       Quaint bed and breakfasts offering cozy rooms and homemade island
+                                                       breakfasts.
+                                                  </p>
+                                                  <ul>
+                                                       <li><a href="#">Seaside Nest B&B</a></li>
+                                                       <li><a href="#">Island Morning House</a></li>
+                                                       <li><a href="#">Taniti Garden View</a></li>
+                                                       <li><a href="#">Bay Breeze Cottage</a></li>
+                                                  </ul>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!--end::CoastalComforts-->
+
+                              </div>
+                              <!--end::LodgingCards-->
+
+                         </div>
+                         <!--end::LodgingDetails-->
+
+                    </div>
+                    <!--end::PageContent-->
+
+               </main>
+               <!--end::MainPageBody-->
+
+               <!--begin::SearchNoResultsAlert-->
+               <div id="noResults" class="alert alert-dismissible alert-warning text-center" style="display: none;">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                         onclick="resetSearch()"></button>
+                    <h4 class="alert-heading">No Results Found</h4>
+                    <p class="mb-0">The search term(s) you entered were not found. Please try another search.</p>
+               </div>
+               <!--begin::SearchNoResultsAlert-->
+
+          </div>
+     </div>
+     <!--end::PageBodyContent-->
+
+     <!--begin::Footer-->
+     <footer class="border-top footer text-muted fixed-bottom bg-light py-3">
+          <div class="container text-center">
+               &copy; 2025 Taniti Tourism
+          </div>
+     </footer>
+     <!--end::Footer-->
+
+     <!--begin::JavaScript-->
+     <script src="./js/bootstrap.bundle.min.js"></script>
+     <!--end::JavaScript-->
+
+     <!--begin::GlobalScript-->
+     <script>
+          document.addEventListener("DOMContentLoaded", function () {
+               const searchInput = document.getElementById("searchInput");
+               const searchBtn = document.getElementById("searchBtn");
+               const noResults = document.getElementById("noResults");
+
+               searchBtn.addEventListener("click", handleSearch);
+               searchInput.addEventListener("input", function () {
+                    if (searchInput.value.trim() === "") {
+                         resetSearch();
+                    }
+               });
+
+               function handleSearch(event) {
+                    event.preventDefault();
+                    const term = searchInput.value.trim().toLowerCase();
+                    const blocks = document.querySelectorAll(".searchable");
+                    let matchCount = 0;
+
+                    blocks.forEach(block => {
+                         const originalHTML = block.getAttribute("data-original") || block.innerHTML;
+                         const text = block.textContent.toLowerCase();
+                         const isMatch = text.includes(term);
+
+                         if (isMatch) {
+                              const regex = new RegExp(`(${term})`, "gi");
+                              block.innerHTML = originalHTML.replace(regex, "<mark>$1</mark>");
+                              block.style.display = "block";
+                              matchCount++;
+                         } else {
+                              block.style.display = "none";
+                              block.innerHTML = originalHTML;
+                         }
+
+                         if (!block.getAttribute("data-original")) {
+                              block.setAttribute("data-original", originalHTML);
+                         }
+                    });
+
+                    noResults.style.display = matchCount === 0 ? "block" : "none";
+               }
+
+               function resetSearch() {
+                    const blocks = document.querySelectorAll(".searchable");
+                    blocks.forEach(block => {
+                         const originalHTML = block.getAttribute("data-original") || block.innerHTML;
+                         block.innerHTML = originalHTML;
+                         block.style.display = "block";
+                    });
+                    noResults.style.display = "none";
+               }
+          });
+     </script>
+     <!--end::GlobalScript-->
+
+</body>
+<!--end::Body-->
+
+</html>
+<!--end::HTMLPage-->

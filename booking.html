@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<!--begin::HTMLPage-->
+<html lang="en">
+
+<!--begin::HTMLHead-->
+<head>
+     <meta charset="utf-8" />
+     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <link rel="icon" type="image/x-icon" href="./media/IslandIcon.ico">
+     <link rel="shortcut icon" href="./media/island.ico" />
+     <title>Taniti Tourism</title>
+     <link rel="stylesheet" href="./css/bootstrap.min.css" />
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<!--end::HTMLHead-->
+
+<!--begin::Body-->
+<body>
+
+     <!--begin::Header-->
+     <header>
+          <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+               <div class="container-fluid">
+
+                    <!--begin::LogoName-->
+                    <a href="index.html" class="navbar-brand d-flex align-items-center">
+                         <img src="./media/island.svg" alt="Logo" width="30" height="30" class="me-2">
+                         Taniti Tourism
+                    </a>
+                    <!--end::LogoName-->
+
+                    <!--begin::MobileReadiness-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                         data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false"
+                         aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <!--end::MobileReadiness-->
+
+                    <!--begin::Navigation-->
+                    <div class="collapse navbar-collapse" id="navbarColor01">
+                         <ul class="navbar-nav me-auto">
+                              <li class="nav-item">
+                                   <a class="nav-link" href="index.html">
+                                        Dashboard
+                                        <span class="visually-hidden">(current)</span>
+                                   </a>
+                              </li>
+                              <li class="nav-item"><a class="nav-link" href="dining.html">Dining</a></li>
+                              <li class="nav-item"><a class="nav-link" href="lodging.html">Lodging</a></li>
+                              <li class="nav-item"><a class="nav-link" href="activities.html">Activities</a></li>
+                              <li class="nav-item"><a class="nav-link" href="transportation.html">Transportation</a>
+                              </li>
+                         </ul>
+
+                         <!--begin::BannerSearchForm-->
+                         <form class="d-flex" onsubmit="handleSearch(event)">
+                              <input id="searchInput" class="form-control me-sm-2" type="search" placeholder="Search">
+                              <button id="searchBtn" class="btn btn-secondary my-2 my-sm-0"
+                                   type="submit">Search</button>
+                         </form>
+                         <!--end::BannerSearchForm-->
+
+                    </div>
+                    <!--end::Navigation-->
+
+               </div>
+          </nav>
+     </header>
+     <!--end::Header-->
+
+     <!--beign::PageBodyContent-->
+     <div class="bs-docs-section">
+          <div class="container mt-5">
+
+               <!--begin::MainPageBody-->
+               <main role="main" class="pb-3 searchable">
+
+                    <!--begin::PageContent-->
+                    <div id="page-content" class="px-4">
+
+                         <!--begin::PageSpecificHeader-->
+                         <div class="d-flex justify-content-between align-items-center mb-4">
+                              <h1>Plan Your Trip</h1>
+                         </div>
+                         <!--end::PageSpecificHeader-->
+
+                         <div class="container my-5">
+
+                              <!--begin::BookingForm-->
+                              <form id="visitForm" method="post" class="needs-validation" novalidate>
+
+                                   <!--begin::UserDetails-->
+                                   <div class="row mb-3">
+                                        <div class="col-md-4">
+                                             <label for="visitorName" class="form-label">Name</label>
+                                             <input type="text" class="form-control" id="visitorName" name="visitorName"
+                                                  required>
+                                        </div>
+                                        <div class="col-md-4">
+                                             <label for="phoneNumber" class="form-label">Phone Number</label>
+                                             <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber"
+                                                  required>
+                                        </div>
+                                        <div class="col-md-4">
+                                             <label for="emailAddress" class="form-label">Email Address</label>
+                                             <input type="email" class="form-control" id="emailAddress"
+                                                  name="emailAddress" required>
+                                        </div>
+                                   </div>
+                                   <!--end::UserDetails-->
+
+                                   <!--begin::FormDates-->
+                                   <div class="row mb-3">
+                                        <div class="col-md-6">
+                                             <label for="arrivalDate" class="form-label">Arrival Date</label>
+                                             <input type="date" class="form-control" id="arrivalDate" name="arrivalDate"
+                                                  required>
+                                        </div>
+                                        <div class="col-md-6">
+                                             <label for="departureDate" class="form-label">Departure Date</label>
+                                             <input type="date" class="form-control" id="departureDate"
+                                                  name="departureDate" required>
+                                        </div>
+                                   </div>
+                                   <!--end::FormDates-->
+
+                                   <!--begin::TransportationToIsland-->
+                                   <div class="mb-3">
+                                        <label for="transportToFrom" class="form-label">Transportation To/From
+                                             Island</label>
+                                        <select class="form-select" id="transportToFrom" name="transportToFrom"
+                                             required>
+                                             <option selected disabled value="">Choose...</option>
+                                             <option>Airplane</option>
+                                             <option>Cruise Ship</option>
+                                        </select>
+                                   </div>
+                                   <!--end::TransportationToIsland-->
+
+                                   <!--begin::IslandTransportation-->
+                                   <div class="mb-3">
+                                        <label for="islandTransport" class="form-label">Island Transportation</label>
+                                        <select class="form-select" id="islandTransport" name="islandTransport"
+                                             required>
+                                             <option selected disabled value="">Choose...</option>
+                                             <option>Public Buses</option>
+                                             <option>Private Buses</option>
+                                             <option>Taxi</option>
+                                             <option>Rental Car</option>
+                                             <option>Bike</option>
+                                        </select>
+                                   </div>
+                                   <!--end::IslandTransportation-->
+
+                                   <!--begin::LodgingPreference-->
+                                   <div class="mb-3">
+                                        <label for="lodgingPreference" class="form-label">Lodging Preference</label>
+                                        <select class="form-select" id="lodgingPreference" name="lodgingPreference"
+                                             required>
+                                             <option selected disabled value="">Choose...</option>
+                                             <option>Local Hotel</option>
+                                             <option>Island Resort</option>
+                                             <option>Family Hotel</option>
+                                             <option>Bed and Breakfast</option>
+                                        </select>
+                                   </div>
+                                   <!--end::LodgingPreference-->
+
+                                   <!--begin::DesiredActivities-->
+                                   <div class="mb-3">
+                                        <label class="form-label">Desired Activities</label>
+                                        <div class="row">
+                                             <div class="col-md-6">
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Beach"
+                                                            id="actBeach"><label class="form-check-label"
+                                                            for="actBeach">Beach</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities"
+                                                            value="Rainforest Excursion" id="actRainforest"><label
+                                                            class="form-check-label" for="actRainforest">Rainforest
+                                                            Excursion</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Volcano Hike"
+                                                            id="actVolcano"><label class="form-check-label"
+                                                            for="actVolcano">Volcano Hike</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities"
+                                                            value="Local History Museum" id="actMuseum"><label
+                                                            class="form-check-label" for="actMuseum">Local History
+                                                            Museum</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities"
+                                                            value="Chartered Fishing Tour" id="actFishing"><label
+                                                            class="form-check-label" for="actFishing">Chartered Fishing
+                                                            Tour</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Snorkeling"
+                                                            id="actSnorkeling"><label class="form-check-label"
+                                                            for="actSnorkeling">Snorkeling</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Zip-Lining"
+                                                            id="actZip"><label class="form-check-label"
+                                                            for="actZip">Zip-Lining</label></div>
+                                             </div>
+                                             <div class="col-md-6">
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities"
+                                                            value="Pubs and Microbreweries" id="actPubs"><label
+                                                            class="form-check-label" for="actPubs">Pubs and
+                                                            Microbreweries</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Taniti Dance Club"
+                                                            id="actDance"><label class="form-check-label"
+                                                            for="actDance">Taniti Dance Club</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Helicopter Ride"
+                                                            id="actHeli"><label class="form-check-label"
+                                                            for="actHeli">Helicopter Ride</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Art Gallery Visit"
+                                                            id="actArt"><label class="form-check-label" for="actArt">Art
+                                                            Gallery Visit</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities" value="Golfing"
+                                                            id="actGolf"><label class="form-check-label"
+                                                            for="actGolf">Golfing</label></div>
+                                                  <div class="form-check"><input class="form-check-input"
+                                                            type="checkbox" name="activities"
+                                                            value="Merriton Landing Adventure" id="actMerriton"><label
+                                                            class="form-check-label" for="actMerriton">Merriton Landing
+                                                            Adventure</label></div>
+                                             </div>
+                                        </div>
+                                   </div>
+                                   <!--end::DesiredActivities-->
+
+                                   <!--begin::ActionButtons-->
+                                   <div class="d-flex justify-content-between mt-4">
+                                        <a href="/Index" class="btn btn-secondary">Cancel</a>
+                                        <button type="button" class="btn btn-success"
+                                             onclick="handleSubmit(event)">Submit</button>
+                                   </div>
+                                   <!--end::ActionButtons-->
+
+                              </form>
+                              <!--end::BookingForm-->
+
+                              <!--begin::SubmitToastMessage-->
+                              <div id="successToast" class="toast position-fixed top-50 start-50 translate-middle"
+                                   style="z-index: 1055;" role="alert" aria-live="assertive" aria-atomic="true">
+                                   <div class="toast-header text-bg-success">
+                                        <strong class="me-auto">Booking Request Submitted</strong>
+                                        <button type="button" class="btn-close ms-2 mb-1" data-bs-dismiss="toast"
+                                             aria-label="Close">
+                                             <span aria-hidden="true"></span>
+                                        </button>
+                                   </div>
+                                   <div class="toast-body">
+                                        Your travel request has been submitted. Check your email for trip quote details.
+                                   </div>
+                              </div>
+                              <!--end::SubmitToastMessage-->
+
+                         </div>
+                    </div>
+                    <!--end::PageContent-->
+
+                    <!--begin::SuccessToastScript-->
+                    <script>
+                         function handleSubmit(event) {
+                              event.preventDefault();
+
+                              const form = document.getElementById('visitForm');
+                              const toastEl = document.getElementById('successToast');
+
+                              if (!form || !toastEl) return;
+
+                              if (form.checkValidity()) {
+                                   form.classList.remove('was-validated');
+
+                                   // Delay toast trigger slightly to ensure DOM is ready
+                                   setTimeout(() => {
+                                        const toast = bootstrap.Toast.getOrCreateInstance(toastEl);
+                                        toast.show();
+
+                                        // Redirect after toast duration
+                                        setTimeout(() => {
+                                             window.location.href = "index.html";
+                                        }, 4000);
+                                   }, 100); // 100ms delay
+                              } else {
+                                   form.classList.add('was-validated');
+                              }
+                         }
+                    </script>
+                    <!--end::SuccessToastScript-->
+
+               </main>
+               <!--end::MainPageBody-->
+
+               <!--begin::SearchNoResultsAlert-->
+               <div id="noResults" class="alert alert-dismissible alert-warning text-center" style="display: none;">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"
+                         onclick="resetSearch()"></button>
+                    <h4 class="alert-heading">No Results Found</h4>
+                    <p class="mb-0">The search term(s) you entered were not found. Please try another search.</p>
+               </div>
+               <!--begin::SearchNoResultsAlert-->
+
+          </div>
+     </div>
+     <!--end::PageBodyContent-->
+
+     <!--begin::Footer-->
+     <footer class="border-top footer text-muted fixed-bottom bg-light py-3">
+          <div class="container text-center">
+               &copy; 2025 Taniti Tourism
+          </div>
+     </footer>
+     <!--end::Footer-->
+
+     <!--begin::JavaScript-->
+     <script src="./js/bootstrap.bundle.min.js"></script>
+     <!--end::JavaScript-->
+
+     <!--begin::GlobalScript-->
+     <script>
+          document.addEventListener("DOMContentLoaded", function () {
+               const searchInput = document.getElementById("searchInput");
+               const searchBtn = document.getElementById("searchBtn");
+               const noResults = document.getElementById("noResults");
+
+               searchBtn.addEventListener("click", handleSearch);
+               searchInput.addEventListener("input", function () {
+                    if (searchInput.value.trim() === "") {
+                         resetSearch();
+                    }
+               });
+
+               function handleSearch(event) {
+                    event.preventDefault();
+                    const term = searchInput.value.trim().toLowerCase();
+                    const blocks = document.querySelectorAll(".searchable");
+                    let matchCount = 0;
+
+                    blocks.forEach(block => {
+                         const originalHTML = block.getAttribute("data-original") || block.innerHTML;
+                         const text = block.textContent.toLowerCase();
+                         const isMatch = text.includes(term);
+
+                         if (isMatch) {
+                              const regex = new RegExp(`(${term})`, "gi");
+                              block.innerHTML = originalHTML.replace(regex, "<mark>$1</mark>");
+                              block.style.display = "block";
+                              matchCount++;
+                         } else {
+                              block.style.display = "none";
+                              block.innerHTML = originalHTML;
+                         }
+
+                         if (!block.getAttribute("data-original")) {
+                              block.setAttribute("data-original", originalHTML);
+                         }
+                    });
+
+                    noResults.style.display = matchCount === 0 ? "block" : "none";
+               }
+
+               function resetSearch() {
+                    const blocks = document.querySelectorAll(".searchable");
+                    blocks.forEach(block => {
+                         const originalHTML = block.getAttribute("data-original") || block.innerHTML;
+                         block.innerHTML = originalHTML;
+                         block.style.display = "block";
+                    });
+                    noResults.style.display = "none";
+               }
+          });
+     </script>
+     <!--end::GlobalScript-->
+
+</body>
+<!--end::Body-->
+
+</html>
+<!--end::HTMLPage-->
